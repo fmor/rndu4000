@@ -1,0 +1,1 @@
+option( 'qtcreator', type : 'boolean', value: false )
