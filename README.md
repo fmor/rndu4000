@@ -5,6 +5,18 @@ Before you try it, i **STRONGLY** encourage you to unmount your raid. It work we
 
 Please note that i have nothing to do with Netgear.
 
+This module have been reported working on others netgear readynas models, take a look at [others nas](#others-nas) section. Please notify me by opening an issue if you have runned it on other device than the rndu4000 and wanted to add it to the list.
+
+
+# Contents
+1. [Requirements](#requirements)
+2. [Build](#build)
+2. [Leds](#leds)
+3. [Buttons](#buttons)
+4. [Lcd](#lcd)
+5. [Others nas](#others-nas)
+
+
 
 # Requirements
 
@@ -90,7 +102,6 @@ Acceptable values are :
 root@nas:~# echo 2 > /sys/devices/rndu4000/leds/backup
 root@nas:~# cat /sys/devices/rndu4000/leds/backup
 2
-root@nas:~#
 ```
 
 
@@ -142,3 +153,12 @@ root@nas:~# echo -n 'logger "Button backup has been pressed"' > /sys/devices/rnd
 root@nas:~# cat /sys/devices/rndu4000/buttons/backup_cmdline
 logger "Button backup has been pressed"
 ```
+
+
+# Others nas
+
+This module have been reported working on some others models of Netgear nas. ***Since i don't own them, i can't garanty the module will work.***
+
+| Model    | Url                                         | Comment                                      | Thanks to                                                  |
+|----------|---------------------------------------------|----------------------------------------------|------------------------------------------------------------|
+| RN314    |   https://github.com/psyrykh/readynas-rn314 | Set LPC_DEVICE_ID  to 0x3a18 in src/config.h | [Pavel Syrykh](https://github.com/psyrykh)     |
